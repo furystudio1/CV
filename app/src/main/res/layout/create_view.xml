@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/app_color">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_selector"
+            android:padding="15dp"
+            android:src="@drawable/back_unpresed" />
+
+        <ImageView
+            android:id="@+id/btnSetting"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_selector"
+            android:padding="15dp"
+            android:src="@drawable/button_settings" />
+
+        <TextView
+            android:id="@+id/tvt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Making video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_text_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab">
+
+        <RelativeLayout
+            android:id="@+id/rl_videoplayer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/col_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    android:text="Once you start, you can exit the program and get to your other tasks. \n Do not lock your phone and do not completely hang the program. \n After the job is completed, a message will be sent."
+                    android:textColor="@color/bt_text"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/click_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_selector"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_check"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.12"
+                        android:src="@drawable/sport_me_tic_music_off" />
+
+                    <TextView
+                        android:id="@+id/ts_check"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Do not show any more"
+                        android:textColor="@color/black_app"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/top3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/col_help"
+                android:background="@color/app_color_hint" />
+
+
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top3"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Video name"
+                android:textColor="@color/app_color" />
+
+            <EditText
+                android:id="@+id/NameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtname"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/search_line"
+                android:gravity="center"
+                android:hint="Enter a name"
+                android:imeOptions="actionSearch"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@color/app_color"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/app_color_hint"
+                android:textColorLink="@color/white" />
+
+            <View
+                android:id="@+id/top2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/NameEdit"
+                android:background="@color/app_color_hint" />
+
+            <LinearLayout
+                android:id="@+id/ll_videoformat2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top2"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/btn_org_selector"
+                    android:gravity="center"
+                    android:text="Select music"
+                    android:textColor="@color/app_color"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/top4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/ll_videoformat2"
+                android:background="@color/app_color_hint" />
+
+            <TextView
+                android:id="@+id/textmodel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top4"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Photo change model"
+                android:textColor="@color/app_color" />
+
+            <LinearLayout
+                android:id="@+id/modele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textmodel"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/model_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back_voice"
+                    android:text="Simple"
+                    android:textColor="@color/app_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/model_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back_voice_off"
+                    android:text="Fade away"
+                    android:textColor="@color/app_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/model_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/back_voice_off"
+                    android:text="Fade fast"
+                    android:textColor="@color/app_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_tedad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/modele"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Note: The number of photos must be 5 or 10 or 20."
+                android:textColor="@color/bt_text"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/top5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text_tedad"
+                android:background="@color/app_color_hint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display time of each photo (s)"
+                android:textColor="@color/app_color"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:id="@+id/text_time"
+                android:layout_below="@+id/top5"/>
+
+            <EditText
+                android:id="@+id/NameEdit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_time"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/search_line"
+                android:gravity="center"
+                android:text="5"
+                android:imeOptions="actionDone"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:textColor="@color/app_color"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/app_color_hint"
+                android:textColorLink="@color/white" />
+
+            <View
+                android:id="@+id/top7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/NameEdit2"
+                android:background="@color/app_color_hint" />
+
+            <RelativeLayout
+                android:id="@+id/aaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top7">
+
+                <RelativeLayout
+                    android:id="@+id/top1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:id="@+id/select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/btn_org_selector"
+                        android:gravity="center"
+                        android:text="Select photos"
+                        android:textColor="@color/app_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/select2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Video attention is the selection of photos, respectively"
+                        android:textColor="@color/app_color"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/top6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/aaa"
+                android:background="@color/app_color_hint" />
+
+            <LinearLayout
+                android:id="@+id/ll_videoformat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top6"
+                android:background="@color/gray2"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/trimbut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/btn_org_selector"
+                    android:gravity="center"
+                    android:text="Make video"
+                    android:textColor="@color/app_color"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/tab"
+        android:background="@drawable/header_shadow" />
+
+</RelativeLayout>
